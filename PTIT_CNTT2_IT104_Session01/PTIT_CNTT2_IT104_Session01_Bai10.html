@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const arrStrRandom=(arr)=>{
+        const arrTotal={}
+        arr.forEach(item=>{
+            const key=item.split('').sort().join('')
+            if(!arrTotal[key]){
+                arrTotal[key]=[]
+            }
+            arrTotal[key].push(item)
+        })
+        return Object.values(arrTotal)
+    }
+    const arr=["eat", "tea", "tae", "mum", "umm", "mmu"]
+    console.log(arrStrRandom(arr))
+</script>
+</body>
+</html>
