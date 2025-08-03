@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id, name, age, score) {
+            this.id = id
+            this.name = name
+            this.age = age
+            this.score = score
+        }
+        getAverageScore() {
+            let total = 0
+            for (let i = 0; i < this.score.length; i++) {
+                total += this.score[i]
+            }
+            return total/this.score.length
+        }
+        toString(){
+            return `ID: ${this.id}, Name: ${this.name}, Age: ${this.age}, Score: ${this.score.join(" ")}, Average: ${this.getAverageScore().toFixed(2)}`
+        }
+    }
+    const studentList=[
+        new Student("R001", "John Doe1", 18, [4, 7, 8,5]),
+        new Student("R002", "James Doe2", 19, [7, 7,5, 5,5]),
+        new Student("R003", "James Doe3", 20, [9, 8, 9,5]),
+        new Student("R004", "James Doe4", 21, [7, 8,5, 7]),
+        new Student("R005", "James Doe5", 22, [8,75, 7, 10])
+    ]
+    //a->Z
+    sortStudentByName=(studentList)=>{
+        studentList.sort((a,b)=> a.name.localeCompare(b.name))
+        return studentList
+    }
+    //ttin Stu By Id
+    getStudentById=(studentList, id)=>{
+        const stu=studentList.find((s)=>s.id===id)
+        if(!stu) return null
+        else return stu.toString()
+    }
+    //stu Avg Top
+    getTopStudent=(studentList)=>{
+        if(studentList.length===0) return []
+        const topAvg=Math.max(...studentList.map(s=>s.getAverageScore()))
+        return studentList.filter(s=>s.getAverageScore()===topAvg)
+    }
+    //point All Class
+    getStudentByScoreRange=(studentList, min, max)=>{
+        return studentList.filter(s=>{
+            const avg=s.getAverageScore()
+            return avg>=min && avg<=max
+        })
+    }
+    console.log("Stu: ", getStudentById(studentList, "R001"))
+    console.log("Stu top: ", getTopStudent(studentList))
+    console.log("Point avg all class: ", getStudentByScoreRange(studentList, 0, 10).map(s=>s.toString()))
+    console.log("After name sort a->z: ")
+    const stuSort=sortStudentByName(studentList)
+    stuSort.forEach(s=>{
+        console.log(s.toString())
+    })
+
+</script>
+</body>
+</html>
