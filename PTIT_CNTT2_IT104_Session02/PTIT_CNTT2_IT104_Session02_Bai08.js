@@ -15,7 +15,7 @@ let user=[
             company: "Viettel"
         }
     }
-]
+]x
 let displayUserInfo=(user)=>{
     console.log(`${user.name} ${user.age} ${user.location.city} ${user.location.country} ${user.contact.email} ${user.contact.phone}`);
 }
