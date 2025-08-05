@@ -8,3 +8,4 @@ console.log(greetingWithWeather('Thuận', 'sunny'))
 console.log(greetingWithWeather('Thuận', 'rainy'))
 console.log(greetingWithWeather('Thuận', 'cloudy'))
 console.log(greetingWithWeather('Thuận', 'nanis'))
+s
