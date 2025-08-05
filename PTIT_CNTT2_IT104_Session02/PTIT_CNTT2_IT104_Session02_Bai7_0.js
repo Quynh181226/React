@@ -6,4 +6,4 @@ formatDate=(dateStr)=>{
         return `${day}/${month}/${year}`
 }
 module.exports={formatDate};
-// console.log(formatDate(new Date()s))
+// console.log(formatDate(new Date()))

@@ -92,4 +92,4 @@ const getOrder=(products)=>{
     }
     return detail
 }
-console.log(getOrder(products))s
+console.log(getOrder(products))

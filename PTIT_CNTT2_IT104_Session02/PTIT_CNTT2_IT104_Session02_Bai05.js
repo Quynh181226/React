@@ -22,4 +22,4 @@ displayContact=()=>{
 }
 addContact('Thuận', '0123457999', 'thuan@icloud.com')
 addContact('Tú', '0792520027', 'tu@icloud.com')
-displayContact()s
+displayContact()

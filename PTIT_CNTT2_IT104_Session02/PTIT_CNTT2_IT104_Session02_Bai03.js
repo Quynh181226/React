@@ -1,4 +1,4 @@
-sconst typeConsole=(type='log')=>{
+const typeConsole=(type='log')=>{
     console[type](`Day la type: ${type}`)
 }
 

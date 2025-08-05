@@ -8,4 +8,4 @@ const sum=(arr)=>{
         return ans
     }
 let arr=[2, 5, 7, 8]
-console.log(sum(arr))s
+console.log(sum(arr))
