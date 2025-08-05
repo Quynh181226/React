@@ -17,6 +17,6 @@ let user=[
     }
 ]
 let displayUserInfo=(user)=>{
-    console.log(`${user.name} ${user.age} ${user.location.city} ${user.location.country} ${user.contact.email} ${user.contact.phone}`);
+    console.log(`${user.name} ${user.age} ${user.location.city} work as ${user.job.title} at ${user.job.company} ${user.location.country} ${user.contact.email} ${user.contact.phone}`);
 }
 displayUserInfo(user[0])
