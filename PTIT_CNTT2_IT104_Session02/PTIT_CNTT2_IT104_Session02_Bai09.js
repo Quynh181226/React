@@ -51,5 +51,5 @@ const print=(stu)=>{
             Best sub: ${Max.subject} (${Max.score})
             Weakest sub: ${Min.subject} (${Min.score})
            `
-}x
+}
 console.log(print(student))
