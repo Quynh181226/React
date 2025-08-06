@@ -1,9 +1,10 @@
-var str = 'banana';
-var res = "";
-for (var _i = 0, str_1 = str; _i < str_1.length; _i++) {
-    var i = str_1[_i];
+let str = 'banana';
+let res = "";
+for (let i of str) {
     if (!res.includes(i)) {
         res += i;
     }
 }
 console.log(res);
+export {};
+//# sourceMappingURL=PTIT_CNTT2_IT104_Session03_Bai07.js.map

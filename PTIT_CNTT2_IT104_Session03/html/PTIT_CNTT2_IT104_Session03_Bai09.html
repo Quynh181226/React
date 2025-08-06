@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container{
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content-input{
+            margin-bottom: 15px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button{
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /*.error{*/
+        /*    color: red;*/
+        /*    background-color: #cccccc;*/
+        /*}*/
+        .ans{
+            /*background-color: #bdb9b9;*/
+            margin-top: 10px;
+            padding: 16px;
+
+
+            /*padding-left: 12px;*/
+            /*padding-right: 12px;*/
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            /*cursor: pointer;*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content-input">
+        <label for="input1">Num1</label>
+        <input id="input1" type="text">
+    </div>
+    <div class="content-input">
+        <label for="input2">Num2</label>
+        <input id="input2" type="text">
+    </div>
+    <div class="content-btn">
+        <button class="btn" id="btnSum">+</button>
+        <button class="btn" id="btnSub">-</button>
+        <button class="btn" id="btnMul">*</button>
+        <button class="btn" id="btnDiv">/</button>
+        <button class="btn" id="btnPower">^</button>
+        <button class="btn" id="btnSqrt">√</button>
+        <button class="btn" id="btnFactorial">!</button>
+        <button id="cal">=</button>
+        <div class="btn ans" id="ans"></div>
+    </div>
+
+</div>
+<script src="../dist/PTIT_CNTT2_IT104_Session03_Bai09.js"></script>
+</body>
+</html>

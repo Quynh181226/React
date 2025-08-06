@@ -1,0 +1,13 @@
+"use strict";
+const btnAdd = document.getElementById("btnAdd");
+const btnSub = document.getElementById("btnSub");
+const btnMul = document.getElementById("btnMul");
+const btnDiv = document.getElementById("btnDiv");
+const btnPower = document.getElementById("btnPower");
+const btnSqrt = document.getElementById("btnSqrt");
+const btnFactorial = document.getElementById("btnFactorial");
+const calc = document.getElementById("cal");
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+let curr = "";
+le;
