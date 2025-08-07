@@ -1,39 +1,31 @@
 interface Product{
-    // id: string
     name: string
     price: number
     category: {
-        // id: string
         name: string
     }
     discount?: number
 }
 const listProducts: Product[] = [
     {
-        // id: "N01",
         name: "quần1",
         price: 150000,
         category:{
-            // id: 'C01',
             name: 'fashion'
         },
         discount: 10
     },
     {
-        // id: 'N02',
         name: "quần2",
         price: 750000,
         category:{
-            // id: 'C02',
             name: 'fashion'
         }
     },
     {
-        // id: "N03",
         name: "quần3",
         price: 450000,
         category:{
-            // id: 'C03',
             name: 'fashion'
         },
         discount: 5
