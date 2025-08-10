@@ -30,7 +30,7 @@ class Dog extends Animal{
         this.breed = breed
     }
     speak():void {
-        console.log('trang an cut')
+        console.log('trang le')
     }
 }
 let randomAnimal = new Animal("animal",10,"Mamal")
