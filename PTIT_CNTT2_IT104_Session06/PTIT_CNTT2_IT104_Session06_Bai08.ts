@@ -3,8 +3,8 @@ class Book{
     title: string
     author: string
     stock: number
-    status: number
-    constructor(id: number, title: string, author: string, stock: number, status: number) {
+    status: string
+    constructor(id: number, title: string, author: string, stock: number, status: string) {
         this.id = id
         this.title = title
         this.author = author
