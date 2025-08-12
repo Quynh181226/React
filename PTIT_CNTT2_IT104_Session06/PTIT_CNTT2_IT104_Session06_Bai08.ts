@@ -16,7 +16,7 @@ class Member{
     id: number
     name: string
     contact: string
-    lendendBooks: lendedBook[]
+    lendendBooks: LendedBook[]
     status: string
     constructor(id: number, name: string, contact: string, status: string) {
         this.id = id

@@ -11,7 +11,7 @@ class Circle implements Geometry{
         return Math.PI * this.radius * this.radius
     }
     calcPerimeter(): any {
-        return Math.PI *this.radius * 2
+        return 2 * Math.PI *this.radius
     }
 }
 
@@ -26,7 +26,7 @@ class Rec implements Geometry{
         return this.width * this.width
     }
     calcPerimeter(): any {
-        return (this.height + this.height) / 2
+        return (this.height + this.height) * 2
     }
 }
 
