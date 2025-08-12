@@ -12,20 +12,16 @@ class Student{
 let allStudents: Student[] = []
 class Classroom {
     students: Student[] = []
-
     addStudent(student: Student) {
         this.students.push(student)
     }
-
     showStudent() {
         console.log(this.students)
     }
-
     filterStudent(id: string) {
         const newStudent = this.students.find((e) => e.idStudent() == id)
         console.log(newStudent)
     }
-
     addStudentAll(id: string) {
         const stIdx = allStudents.findIndex((e) => e.idStudent() == id)
         if (stIdx != -1) {
@@ -36,7 +32,6 @@ class Classroom {
             console.log('Not found')
         }
     }
-
     removeStudent(id: string) {
         const stIdx = this.students.findIndex((e) => e.idStudent() == id)
         if(stIdx != -1) {
@@ -46,7 +41,6 @@ class Classroom {
             console.log('Not found')
         }
     }
-
     editStudent(id: string, value: string) {
         const stIdx = this.students.findIndex((e) => e.idStudent() == id)
         if(this.students[stIdx]){
