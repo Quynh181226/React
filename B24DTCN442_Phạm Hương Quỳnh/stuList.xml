@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studentList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation='stuList.xsd'>
+    <student studentId="D001">
+        <fullName>Vũ Hoàng Nhi</fullName>
+        <birthDate>12/12/2000</birthDate>
+        <gender>Female</gender>
+        <gpa>2.5</gpa>
+        <address>
+            <houseNumber>1990</houseNumber>
+            <street>Lê Văn Lộc</street>
+            <district>Tam Điệp</district>
+            <city>Ninh Bình</city>
+        </address>
+    </student>
+    <student studentId="D002">
+        <fullName>Phạm Hương Quỳnh</fullName>
+        <birthDate>16/12/2000</birthDate>
+        <gender>Female</gender>
+        <gpa>3.0</gpa>
+        <address>
+            <houseNumber>1999</houseNumber>
+            <street>Nguyễn Văn Trỗi</street>
+            <district>Tam Điệp</district>
+            <city>Ninh Bình</city>
+        </address>
+    </student>
+</studentList>
