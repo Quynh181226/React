@@ -20,5 +20,7 @@
   "homepage": "https://github.com/Quynh181226/React#readme",
   "devDependencies": {
     "typescript": "^5.9.2"
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
