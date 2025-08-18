@@ -7,6 +7,6 @@ const createObject=<K extends string, V>(keys: K[], values: V[]): Record<K, V> =
     return result
 }
 
-const keys = ['name', 'age', 'email'];
-const values = ['Quynh', 18, 'quynh2682@icloud.com'];
-console.log(createObject(keys, values));
+const keys = ['name', 'age', 'email']
+const values = ['Quynh', 18, 'quynh2682@icloud.com']
+console.log(createObject(keys, values))
