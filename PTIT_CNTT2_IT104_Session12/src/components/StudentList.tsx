@@ -1,18 +1,18 @@
 export interface Student {
-    id: string;
-    name: string;
-    age: number;
-    gender: string;
-    dob?: string;
-    birthplace?: string;
-    address?: string;
+    id: string
+    name: string
+    age: number
+    gender: string
+    dob?: string
+    birthplace?: string
+    address?: string
 }
 
 interface Props {
-    students: Student[];
+    students: Student[]
 }
 
-export const StudentList: React.FC<Props> = ({ students }) => {
+export function StudentList({ students }: Props) {
     return (
         <div className="list-student">
             <div className="title-list">Danh sách sinh viên</div>
@@ -48,4 +48,4 @@ export const StudentList: React.FC<Props> = ({ students }) => {
             </div>
         </div>
     );
-};
+}
