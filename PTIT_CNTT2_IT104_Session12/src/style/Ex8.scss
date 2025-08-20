@@ -1,0 +1,80 @@
+.tableEx8 {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px auto;
+  text-align: center;
+  //border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+
+  th, td {
+    padding: 12px;
+  }
+
+  .theadEx8 {
+    tr {
+      background-color: #f7f9fc;
+      height: 50px;
+      font-weight: bold;
+      color: #6b7280;
+      text-align: center;
+    }
+  }
+
+  .tbodyEx8 {
+    tr {
+      height: 50px;
+      border-bottom: 1px solid #f1f3f3;
+      transition: background 0.2s;
+
+      &:hover {
+        background-color: #f9fafb;
+      }
+    }
+  }
+
+  .footerEx8 {
+    tr {
+      background-color: #f7f9fc;
+      height: 40px;
+    }
+  }
+
+  .activeBtn {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+    button {
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .edit {
+      background-color: #fff;
+      border: 1px solid #d1d5db;
+      color: #374151;
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+
+    .delete {
+      background-color: #ef4444;
+      color: white;
+      border: none;
+
+      &:hover {
+        background-color: #dc2626;
+      }
+    }
+  }
+}

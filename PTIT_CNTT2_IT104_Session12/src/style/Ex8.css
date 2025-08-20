@@ -1,0 +1,62 @@
+.tableEx8 {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+.tableEx8 th, .tableEx8 td {
+  padding: 12px;
+}
+.tableEx8 .theadEx8 tr {
+  background-color: #f7f9fc;
+  height: 50px;
+  font-weight: bold;
+  color: #6b7280;
+  text-align: center;
+}
+.tableEx8 .tbodyEx8 tr {
+  height: 50px;
+  border-bottom: 1px solid #f1f3f3;
+  transition: background 0.2s;
+}
+.tableEx8 .tbodyEx8 tr:hover {
+  background-color: #f9fafb;
+}
+.tableEx8 .footerEx8 tr {
+  background-color: #f7f9fc;
+  height: 40px;
+}
+.tableEx8 .activeBtn {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.tableEx8 .activeBtn button {
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.tableEx8 .activeBtn .edit {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+.tableEx8 .activeBtn .edit:hover {
+  background-color: #f3f4f6;
+}
+.tableEx8 .activeBtn .delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+.tableEx8 .activeBtn .delete:hover {
+  background-color: #dc2626;
+}
