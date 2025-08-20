@@ -1,6 +1,3 @@
-import React from "react";
-import "../styles/Ex10.scss";
-
 export interface Student {
     id: string;
     name: string;

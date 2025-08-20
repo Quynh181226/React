@@ -2,9 +2,9 @@ import "mdb-ui-kit/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
-import {Search} from "./Search.tsx";
-import {Nav} from "./Nav.tsx";
-import {Task} from "./Task.tsx";
+import {Search} from "../components/Search.tsx";
+import {Nav} from "../components/Nav.tsx";
+import {Task} from "../components/Task.tsx";
 
 export const Ex9_TodoListIndex=()=>{
     return(

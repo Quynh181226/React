@@ -1,5 +1,3 @@
-import "../styles/Ex10.scss";
-
 export const StudentSearch = () => {
     return (
         <div className="header-left">

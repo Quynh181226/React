@@ -1,9 +1,9 @@
 import "../style/UserLayout.scss";
-import Header from "./Header";
-import Navbar from "./Navbar";
-import Menu from "./Menu";
-import Article from "./Article";
-import Main1 from "./Main1.tsx";
+import Header from "../components/Header.tsx";
+import Navbar from "../components/Navbar.tsx";
+import Menu from "../components/Menu.tsx";
+import Article from "../components/Article.tsx";
+import Main1 from "../components/Main1.tsx";
 
 export default function UserLayout() {
     return (
