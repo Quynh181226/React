@@ -1,27 +1,26 @@
-import { useState } from "react";
+import { useState } from "react"
 
 export const Ex7 = () => {
     const [options, setOptions] = useState({
         theme: "Sáng",
         language: "Tiếng Việt",
-    });
+    })
 
     const toggleTheme = () => {
         setOptions((prev) => ({
             ...prev,
             theme: prev.theme === "Sáng" ? "Tối" : "Sáng",
-        }));
-    };
+        }))
+    }
 
-    // Toggle language
     const toggleLanguage = () => {
         setOptions((prev) => ({
             ...prev,
             language: prev.language === "Tiếng Việt" ? "Tiếng Anh" : "Tiếng Việt",
-        }));
-    };
+        }))
+    }
 
-    const isDark = options.theme === "Tối";
+    const isDark = options.theme === "Tối"
     const styles = {
         backgroundColor: isDark ? "black" : "white",
         color: isDark ? "white" : "black",
@@ -30,7 +29,7 @@ export const Ex7 = () => {
         marginBottom: "20px",
         fontWeight: "bold",
         width: "35%"
-    };
+    }
 
     return (
         <div>
@@ -44,5 +43,5 @@ export const Ex7 = () => {
             </button>
             <button onClick={toggleLanguage}>Đổi ngôn ngữ</button>
         </div>
-    );
-};
+    )
+}
