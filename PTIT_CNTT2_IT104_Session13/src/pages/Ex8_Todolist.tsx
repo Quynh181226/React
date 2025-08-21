@@ -39,7 +39,7 @@ export const Ex8_TodoList = () => {
     ])
 
     return (
-        <>
+        <div className="containerTable">
             <table>
                 <thead>
                 <tr>
@@ -72,6 +72,6 @@ export const Ex8_TodoList = () => {
                 ))}
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }

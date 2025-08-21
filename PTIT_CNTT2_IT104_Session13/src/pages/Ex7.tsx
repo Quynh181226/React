@@ -22,13 +22,15 @@ export const Ex7 = () => {
 
     const isDark = options.theme === "Tối"
     const styles = {
+
         backgroundColor: isDark ? "black" : "white",
         color: isDark ? "white" : "black",
         padding: "20px",
         border: "1px solid gray",
         marginBottom: "20px",
         fontWeight: "bold",
-        width: "35%"
+        width: "35%",
+        fontFamily: "Arial, sans-serif"
     }
 
     return (
