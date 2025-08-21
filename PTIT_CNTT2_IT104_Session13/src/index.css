@@ -1,0 +1,37 @@
+*{
+    font-family: Arial, sans-serif;
+}
+th, td{
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+th{
+    color: #AAACBA;
+    font-weight: 510;
+}
+td{
+    text-align: center;
+    color: #728DB6;
+}
+.edit{
+    color: #e2862a;
+    background-color: #fff7e6;
+    border: 1px solid #ffe2b2;
+    border-radius: 5px;
+}
+.dele, .no{
+    color: #d11d2c;
+    background-color: #fff1f0;
+    border: 1px solid #ffbfbb;
+    border-radius: 5px;
+}
+.yes{
+    color: #84b77e;
+    background-color: #f6ffed;
+    border: 1px solid #bcec97;
+    border-radius: 5px;
+    padding: 2px;
+}
+span, button{
+    padding: 5px;
+}

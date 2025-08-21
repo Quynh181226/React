@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.0",
-    "mdb-ui-kit": "^9.1.0",
-    "sass": "^1.90.0"
-  }
-}
