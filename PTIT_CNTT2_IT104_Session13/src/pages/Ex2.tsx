@@ -9,8 +9,7 @@ export const Ex2=()=>{
     })
     return(
         <>
-            <h3>Personal info</h3>
-            <h4>Id: {info.id} Name: {info.name} Dob: {info.dob} Address: {info.address}</h4>
+            <h3>Personal info: Id: {info.id} Name: {info.name} Dob: {info.dob} Address: {info.address}</h3>
         </>
     )
 }
