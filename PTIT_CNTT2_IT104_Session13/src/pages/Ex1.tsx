@@ -8,9 +8,7 @@ const Ex1 = (state: State) => {
    }
 
     return (
-        <h3>
-            Full name: {state.name}
-        </h3>
+        <h3>Full name: {state.name}</h3>
     )
 }
 
