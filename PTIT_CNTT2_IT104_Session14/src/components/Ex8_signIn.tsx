@@ -28,15 +28,21 @@ export class Ex8_signIn extends Component<{}, LoginState> {
 
     handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        this.setState({ [name]: value } as Pick<LoginState, keyof LoginState>);
-    };
+        this.setState({
+            ...this.state,
+            [name]: value
+        })
+    }
 
     handleSubmit = () => {
-        if (
-            data &&
-            this.state.email === data.email &&
-            this.state.password === data.password
-        ) {
+        const { email, password } = this.state;
+
+        if (!email || !password) {
+            this.setState({ message: "Empty" });
+            return;
+        }
+
+        if (data && email === data.email && password === data.password) {
             this.setState({ message: "Login success" });
         } else {
             this.setState({ message: "Email or password error" });
@@ -49,17 +55,33 @@ export class Ex8_signIn extends Component<{}, LoginState> {
                 <h2 className="signIn-title">Login</h2>
 
                 <label className="signIn-label">Email:</label>
-                <input className="signIn-input" type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
+                <input
+                    className="signIn-input"
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                />
 
                 <label className="signIn-label">Password:</label>
-                <input className="signIn-input" type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                <input
+                    className="signIn-input"
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                />
 
-                <button type="button" className="signIn-button" onClick={this.handleSubmit}>
+                <button
+                    type="button"
+                    className="signIn-button"
+                    onClick={this.handleSubmit}
+                >
                     Login
                 </button>
 
                 <p className="signIn-message">{this.state.message}</p>
             </div>
-        )
+        );
     }
 }
