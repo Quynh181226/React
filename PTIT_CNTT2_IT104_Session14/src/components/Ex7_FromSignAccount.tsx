@@ -4,7 +4,7 @@ import "../style/Ex7_FromSignAccount.css"
 interface Account {
     name: string
     email: string
-    passWorld: string
+    password: string
     phoneNumber: string
 }
 
@@ -14,7 +14,7 @@ export class Ex7_FromSignAccount extends Component<{}, Account> {
         this.state = {
             name: "",
             email: "",
-            passWorld: "",
+            password: "",
             phoneNumber: "",
         }
     }
@@ -28,7 +28,24 @@ export class Ex7_FromSignAccount extends Component<{}, Account> {
     }
 
     submitAction = () => {
-        localStorage.setItem("data", JSON.stringify(this.state))
+        const { name, email, password, phoneNumber } = this.state
+
+        if (!name || !email || !password || !phoneNumber) {
+            alert("Empty")
+            return
+        }
+
+        let accounts: Account[] = JSON.parse(localStorage.getItem("accounts") || "[]")
+
+        if (accounts.find(acc => acc.email === email)) {
+            alert("Has exists")
+            return
+        }
+
+        accounts.push({ name, email, password, phoneNumber })
+
+        localStorage.setItem("accounts", JSON.stringify(accounts))
+        alert("Register success!")
     }
 
     render() {
@@ -43,7 +60,7 @@ export class Ex7_FromSignAccount extends Component<{}, Account> {
                 <input className="signUp-input" onChange={this.handleChange} name="email" value={this.state.email}/>
 
                 <label className="signUp-label">Password:</label>
-                <input className="signUp-input" onChange={this.handleChange} name="passWorld" type="password" value={this.state.passWorld}/>
+                <input className="signUp-input" onChange={this.handleChange} name="password" type="password" value={this.state.password}/>
 
                 <label className="signUp-label">Phone Number:</label>
                 <input className="signUp-input" onChange={this.handleChange} name="phoneNumber" value={this.state.phoneNumber}/>
