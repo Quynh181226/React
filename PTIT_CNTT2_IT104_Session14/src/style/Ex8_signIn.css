@@ -1,0 +1,54 @@
+.signIn-container {
+    width: 320px;
+    border-radius: 10px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.signIn-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.signIn-label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #444;
+}
+
+.signIn-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.signIn-button {
+    margin-top: 16px;
+    padding: 10px;
+    background: #0000FF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.signIn-button:hover {
+    background: #0056b3;
+}
+
+.signIn-message {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đồng Hồ Đếm Thời Gian</title>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../style/Ex_Total.css" />
+</head>
+<body>
+<div class="timer-container">
+  <div class="timer-header">
+    <h1 class="timer-title">Đồng Hồ Đếm Thời Gian</h1>
+  </div>
+
+  <div class="mode-selector">
+    <button class="mode-btn active" data-mode="stopwatch">Bấm Giờ</button>
+  </div>
+
+  <div class="time-display" id="timeDisplay">00:00:00</div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn start-btn" id="startBtn">Bắt Đầu</button>
+    <button
+            class="control-btn pause-btn"
+            id="pauseBtn"
+            style="display: none"
+    >
+      Tạm Dừng
+    </button>
+    <button class="control-btn reset-btn" id="resetBtn">Đặt Lại</button>
+  </div>
+
+  <div class="status-message" id="statusMessage"></div>
+</div>
+</body>
+</html>
