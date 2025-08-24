@@ -8,7 +8,7 @@ export class Ex2_Notification extends Component{
             </>
         )
     }
-    print(){
+    componentDidMount(){
         console.log("Component has been mount")
     }
 }
