@@ -19,7 +19,7 @@ export class Ex3_ChangeState extends Component<{}, State> {
     render() {
         return (
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>Company name: {this.state.name}</h3>
+                <p>Company name: {this.state.name}</p>
                 <button onClick={this.changeName} style={{ width: "10%" }}>
                     Change
                 </button>

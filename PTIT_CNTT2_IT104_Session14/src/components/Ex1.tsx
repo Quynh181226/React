@@ -16,7 +16,7 @@ export class Ex1 extends  Component<{}, State>{
     render() {
         return (
             <>
-                <h1>{this.state.userName}</h1>
+                <p>{this.state.userName}</p>
             </>
         )
     }

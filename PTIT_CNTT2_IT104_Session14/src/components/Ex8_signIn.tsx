@@ -49,33 +49,17 @@ export class Ex8_signIn extends Component<{}, LoginState> {
                 <h2 className="signIn-title">Login</h2>
 
                 <label className="signIn-label">Email:</label>
-                <input
-                    className="signIn-input"
-                    type="text"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                />
+                <input className="signIn-input" type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
 
                 <label className="signIn-label">Password:</label>
-                <input
-                    className="signIn-input"
-                    type="password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                />
+                <input className="signIn-input" type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
 
-                <button
-                    type="button"
-                    className="signIn-button"
-                    onClick={this.handleSubmit}
-                >
+                <button type="button" className="signIn-button" onClick={this.handleSubmit}>
                     Login
                 </button>
 
                 <p className="signIn-message">{this.state.message}</p>
             </div>
-        );
+        )
     }
 }
