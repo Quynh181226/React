@@ -14,7 +14,7 @@ interface LoginState {
     message: string;
 }
 
-let data: Account = JSON.parse(localStorage.getItem("data") || "{}");
+let data: Account = JSON.parse(localStorage.getItem("accounts") || "{}");
 
 export class Ex8_signIn extends Component<{}, LoginState> {
     constructor(props: {}) {

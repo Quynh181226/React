@@ -4,7 +4,7 @@
 // import {Ex4_blockRender} from "./components/Ex4_BlockRender.tsx"
 // import {Ex5_GetDataFrom}  from "./components/Ex5_GetDataFrom.tsx"
 // import {Ex6_GenderForm} from "./components/Ex6_GenderForm.tsx"
-// import {Ex7_FromSignAccount} from "./components/Ex7_FromSignAccount.tsx"
+import {Ex7_FromSignAccount} from "./components/Ex7_FromSignAccount.tsx"
 // import {Ex8_signIn} from "./components/Ex8_signIn.tsx"
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       {/*<Ex4_blockRender/>*/}
       {/*<Ex5_GetDataFrom/>*/}
       {/*<Ex6_GenderForm/>*/}
-      {/*<Ex7_FromSignAccount/>*/}
+      <Ex7_FromSignAccount/>
       {/*<Ex8_signIn/>*/}
     </>
   )
