@@ -42,10 +42,6 @@
     transition: background 0.3s;
 }
 
-.signIn-button:hover {
-    background: #0056b3;
-}
-
 .signIn-message {
     margin-top: 12px;
     text-align: center;
