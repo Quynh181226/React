@@ -9,8 +9,7 @@ export const Pagination = () => {
         fontWeight: 500,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        userSelect: "none" as const,
+        alignItems: "center"
     }
 
     const activeBtnStyle = {
