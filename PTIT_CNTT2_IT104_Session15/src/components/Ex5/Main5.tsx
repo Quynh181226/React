@@ -25,12 +25,12 @@ export const Main5 = () => {
             <table >
                 <tr className="tableHead">
                     <td>STT</td>
-                    <td>Ma Sinh vien</td>
-                    <td>Ten sinh vien</td>
-                    <td>Ngay sinh</td>
+                    <td>MSV</td>
+                    <td>Name</td>
+                    <td>Dob</td>
                     <td>Email</td>
-                    <td>Trang thai</td>
-                    <td>Chuc nang</td>
+                    <td>State</td>
+                    <td>Task</td>
                 </tr>
                 {students.map((s, index) => (
                     <TableRow count={index + 1} {...s} />
