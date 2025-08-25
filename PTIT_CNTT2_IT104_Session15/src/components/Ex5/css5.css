@@ -1,0 +1,12 @@
+
+table td {
+    padding: 1.2%;
+    border-bottom: 1px solid rgb(238, 237, 237);
+    text-align: center;
+}
+.tableHead td{
+    border-bottom: 1px solid rgb(185, 184, 184) !important;
+}
+table{
+    /*border-collapse: collapse;*/
+}
