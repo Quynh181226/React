@@ -1,0 +1,11 @@
+/* Theme sáng */
+.light {
+  background-color: white;
+  color: black;
+}
+
+/* Theme tối */
+.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
