@@ -31,3 +31,5 @@ class Shop extends Component<State>{
 }
 
 export default Shop
+
+
