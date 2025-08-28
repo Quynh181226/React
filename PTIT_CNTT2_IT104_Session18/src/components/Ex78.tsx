@@ -1,11 +1,12 @@
 import { useEffect, useReducer, useState } from "react"
 import { todoReducer, type StateType } from "../reducers/todoReducer"
-import {TodoInput} from "../pages/TodoInput"
-import {TodoList} from "../pages/TodoList"
+import { TodoInput } from "../pages/TodoInput"
+import { TodoList } from "../pages/TodoList"
 import "../index.css"
 
-export  const Ex78=()=> {
-    const [state, dispatch] = useReducer(todoReducer, { listData: [] } as StateType)
+export const Ex78 = () => {
+    const initialState: StateType = { listData: [] }
+    const [state, dispatch] = useReducer(todoReducer, initialState)
     const [inputValue, setInputValue] = useState("")
 
     useEffect(() => {
@@ -22,14 +23,14 @@ export  const Ex78=()=> {
     }
 
     const handleDelete = (id: number) => {
-        if (confirm("Are you sure you want to delete?")){
-            dispatch({type: "DELETE", payload: id})
+        if (confirm("Are you sure you want to delete?")) {
+            dispatch({ type: "DELETE", payload: id })
         }
     }
 
     return (
         <>
-            <TodoInput value={inputValue} onChange={setInputValue} onSubmit={handleSubmit}/>
+            <TodoInput value={inputValue} onChange={setInputValue} onSubmit={handleSubmit} />
             <TodoList list={state.listData} onDelete={handleDelete} />
         </>
     )
