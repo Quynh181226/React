@@ -9,12 +9,7 @@ interface TodoFormProps {
 export const TodoInput=({ value, onChange, onSubmit }: TodoFormProps)=> {
     return (
         <form onSubmit={onSubmit}>
-            <input
-                type="text"
-                placeholder="Input job name"
-                value={value}
-                onChange={(e) => onChange(e.target.value)}
-            />
+            <input type="text" placeholder="Input job name" value={value} onChange={(e) => onChange(e.target.value)}/>
         </form>
     )
 }
