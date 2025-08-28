@@ -22,17 +22,14 @@ export  const Ex78=()=> {
     }
 
     const handleDelete = (id: number) => {
-        // if (confirm)
-            dispatch({ type: "DELETE", payload: id })
+        if (confirm("Are you sure you want to delete?")){
+            dispatch({type: "DELETE", payload: id})
+        }
     }
 
     return (
         <>
-            <TodoInput
-                value={inputValue}
-                onChange={setInputValue}
-                onSubmit={handleSubmit}
-            />
+            <TodoInput value={inputValue} onChange={setInputValue} onSubmit={handleSubmit}/>
             <TodoList list={state.listData} onDelete={handleDelete} />
         </>
     )
