@@ -8,7 +8,7 @@ export const Ex4_PageTitle=()=>{
     return(
         <>
             <h3>Welcome to our page</h3>
-            <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>\
+            <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
             <p>Title will change as you input the field</p>
         </>
     )
