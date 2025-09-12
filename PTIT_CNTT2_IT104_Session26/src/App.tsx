@@ -1,3 +1,4 @@
+// import "./index.css"
 // import { Suspense } from "react"
 // import { BrowserRouter, Routes, Route } from "react-router-dom"
 // import {LazyLoad} from "./components/Ex8/LazyLoad.tsx";
