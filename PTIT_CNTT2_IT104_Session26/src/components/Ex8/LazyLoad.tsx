@@ -1,24 +1,21 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react"
 
-export default function (){
-    const [item, setItem] = useState<string[]>([]);
-    const [loading, setLoading] = useState(false);
+export const LazyLoad=()=>{
+    const [item, setItem] = useState<string[]>([])
+    const [loading, setLoading] = useState(false)
     const [visibleCount, setVisibleCount] = useState(100)
 
-
     useEffect(() => {
-        setLoading(true);
+        setLoading(true)
         setTimeout(() => {
-            const lorem = Array.from({ length: 100 }, (_, i) =>
-                `Lorem ipsum dolor sit amet ${i + 1}.`
-            );
-            setItem(lorem);
-            setLoading(false);
-        }, 1500);
-    }, []);
-
-
-
+            const lorem: string[] = []
+            for (let i = 0; i < 100; i++) {
+                lorem.push(`Lorem ipsum dolor sit amet ${i + 1}.`)
+            }
+            setItem(lorem)
+            setLoading(false)
+        }, 1500)
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,25 +23,23 @@ export default function (){
                 window.innerHeight + document.documentElement.scrollTop + 50 >=
                 document.documentElement.offsetHeight
             ) {
-                loadMore();
+                loadMore()
             }
-        };
+        }
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [visibleCount]);
-
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [visibleCount])
 
     const loadMore = () => {
-        if (visibleCount >= item.length) return;
-        setLoading(true);
+        if (visibleCount >= item.length) return
+        setLoading(true)
 
         setTimeout(() => {
-            setVisibleCount(prev => prev + 20);
-            setLoading(false);
-        }, 1000);
-    };
-
+            setVisibleCount(prev => prev + 20)
+            setLoading(false)
+        }, 1000)
+    }
 
     return (
         <div className="p-4">
@@ -62,5 +57,5 @@ export default function (){
                 </div>
             )}
         </div>
-    );
+    )
 }

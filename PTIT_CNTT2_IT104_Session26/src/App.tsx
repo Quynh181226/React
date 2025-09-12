@@ -1,6 +1,6 @@
 // import { Suspense } from "react"
 // import { BrowserRouter, Routes, Route } from "react-router-dom"
-// import LazyLoad from "./components/Ex8/LazyLoad.tsx";
+// import {LazyLoad} from "./components/Ex8/LazyLoad.tsx";
 // import {Student} from "./components/Ex3Ex4/Student.tsx";
 // import { ProductDetail } from "./components/Ex1/ProductDetail.tsx"
 // import {Student} from "./components/Ex2/Student.tsx";
