@@ -1,5 +1,5 @@
 // import {Ex1_ShoppingCart} from "./components/Ex1_ShoppingCart.tsx";
-// import {Main} from "./components/Ex2/Main.tsx";
+// import {SilbarContent} from "./components/Ex2/SilbarContent.tsx";
 // import {Ex3_RenderCounter} from "./components/Ex3_RenderCounter.tsx";
 // import {Ex4} from "./components/Ex4.tsx";
 import {Ex5} from "./components/Ex5.tsx";
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
         {/*<Ex1_ShoppingCart/>*/}
-        {/*<Main/>*/}
+        {/*<SilbarContent/>*/}
         {/*<Ex3_RenderCounter/>*/}
         {/*<Ex4/>*/}
         <Ex5/>

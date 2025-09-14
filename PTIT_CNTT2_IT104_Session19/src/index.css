@@ -1,6 +1,6 @@
 /* src/index.css */
 
-/* Main component */
+/* SilbarContent component */
 .main-container {
     display: flex;
     align-content: center;
@@ -13,7 +13,7 @@
     background-color: black;
 }
 
-/* Main component */
+/* SilbarContent component */
 .header {
     color: black;
 }

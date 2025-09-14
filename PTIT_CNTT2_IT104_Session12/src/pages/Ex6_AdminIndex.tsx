@@ -3,7 +3,7 @@ import "../style/AdminIndex.scss"
 export const Ex6_AdminIndex=()=>{
     return(
         <main>
-            <header className="Header">Main</header>
+            <header className="Header">SilbarContent</header>
             <section className="SectionEx6">
                 <aside>Menu</aside>
                 <div className="SectionContent">
