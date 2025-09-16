@@ -1,0 +1,201 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Thanh",
+      "gender": "sigma male"
+    },
+    {
+      "id": "2",
+      "name": "Thanh2",
+      "gender": "male"
+    },
+    {
+      "id": "3",
+      "name": "Thanh3",
+      "gender": "female"
+    },
+    {
+      "id": "4",
+      "name": "Thanh4",
+      "gender": "male"
+    },
+    {
+      "id": "5",
+      "name": "Thanh5",
+      "gender": "female"
+    },
+    {
+      "id": "6",
+      "name": "Thanh6",
+      "gender": "male"
+    },
+    {
+      "id": "7",
+      "name": "Thanh7",
+      "gender": "female"
+    },
+    {
+      "id": "8",
+      "name": "Thanh8",
+      "gender": "male"
+    },
+    {
+      "id": "9",
+      "name": "Thanh9",
+      "gender": "female"
+    },
+    {
+      "id": "10",
+      "name": "Thanh10",
+      "gender": "male"
+    },
+    {
+      "id": "11",
+      "name": "Thanh11",
+      "gender": "female"
+    },
+    {
+      "id": "12",
+      "name": "Thanh12",
+      "gender": "male"
+    },
+    {
+      "id": "13",
+      "name": "Thanh13",
+      "gender": "female"
+    },
+    {
+      "id": "14",
+      "name": "Thanh14",
+      "gender": "male"
+    },
+    {
+      "id": "15",
+      "name": "Thanh15",
+      "gender": "female"
+    },
+    {
+      "id": "16",
+      "name": "Thanh16",
+      "gender": "male"
+    },
+    {
+      "id": "17",
+      "name": "Thanh17",
+      "gender": "female"
+    },
+    {
+      "id": "18",
+      "name": "123",
+      "gender": "male"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "product_name": "Laptop Dell Inspiron 15",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiw6ihta3KflG7Ym0Qm7gV7bnnDDkfVCNpQ&s",
+      "price": 15000000,
+      "quantity": 10,
+      "created_at": "2025-09-15"
+    },
+    {
+      "id": "2",
+      "product_name": "Điện thoại Samsung Galaxy S21",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiw6ihta3KflG7Ym0Qm7gV7bnnDDkfVCNpQ&s",
+      "price": 12000000,
+      "quantity": 20,
+      "created_at": "2025-09-14"
+    },
+    {
+      "id": "3",
+      "product_name": "Tai nghe Sony WH-1000XM4",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiw6ihta3KflG7Ym0Qm7gV7bnnDDkfVCNpQ&s",
+      "price": 6500000,
+      "quantity": 15,
+      "created_at": "2025-09-13"
+    },
+    {
+      "id": "4",
+      "product_name": "Bàn phím cơ Logitech G413 SE",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiw6ihta3KflG7Ym0Qm7gV7bnnDDkfVCNpQ&s",
+      "price": 1200000,
+      "quantity": 25,
+      "created_at": "2025-09-12"
+    },
+    {
+      "id": "5",
+      "product_name": "Chuột không dây Microsoft Bluetooth Mouse",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiw6ihta3KflG7Ym0Qm7gV7bnnDDkfVCNpQ&s",
+      "price": 500000,
+      "quantity": 30,
+      "created_at": "2025-09-11"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "student_name": "Nguyen Van A",
+      "email": "vana@example.com",
+      "address": "Hà Nội",
+      "phone": "0912345678",
+      "status": true,
+      "created_at": "2025-09-01"
+    },
+    {
+      "id": "2",
+      "student_name": "Tran Thi B",
+      "email": "thib@example.com",
+      "address": "TP. Hồ Chí Minh",
+      "phone": "0987654321",
+      "status": false,
+      "created_at": "2025-09-02"
+    },
+    {
+      "id": "3",
+      "student_name": "Le Van C",
+      "email": "vanc@example.com",
+      "address": "Đà Nẵng",
+      "phone": "0905123456",
+      "status": true,
+      "created_at": "2025-09-03"
+    },
+    {
+      "id": "4",
+      "student_name": "Pham Thi D",
+      "email": "thid@example.com",
+      "address": "Cần Thơ",
+      "phone": "0932123456",
+      "status": true,
+      "created_at": "2025-09-04"
+    },
+    {
+      "id": "5",
+      "student_name": "Hoang Van E",
+      "email": "vane@example.com",
+      "address": "Hải Phòng",
+      "phone": "0978123456",
+      "status": false,
+      "created_at": "2025-09-05"
+    },
+    {
+      "id": "637",
+      "student_name": "thanhok",
+      "email": "thanhlmao@gmail.com",
+      "address": "200 light street",
+      "phone": "012943225",
+      "status": true,
+      "created_at": "9/15/2025"
+    },
+    {
+      "id": "775",
+      "student_name": "vietBuh",
+      "email": "vietviet0.9cm@gmail.com",
+      "address": "0.9 km, di bo",
+      "phone": "012933542",
+      "status": true,
+      "created_at": "9/15/2025"
+    }
+  ]
+}
