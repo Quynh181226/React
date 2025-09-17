@@ -91,15 +91,15 @@ export const Main = () => {
     }
 
     return (
-        <div style={{ width: 400, margin: "20px auto", padding: 20, border: "2px solid #ddd", borderRadius: 8 }}>
+        <div style={{ width: 400, margin: "20px auto", padding: 20, border: "2px solid #ddd", borderRadius: 8, fontFamily: "sans-serif"}}>
             <h3 style={{ textAlign: "center" }}>Quản lý công việc</h3>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16, border: "1px solid #eee", boxShadow: "0 4px 6px #E3E3E3", padding: "10px"}}>
                 <Input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Nhập tên công việc" />
                 <Button onClick={addTask} type="primary">Thêm công việc</Button>
             </div>
 
-            <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+            <div style={{ display: "flex", gap: 8, marginBottom: 16, border: "1px solid #eee", boxShadow: "0 4px 6px #E3E3E3", padding: "15px"}}>
                 <Button type={filter === "all" ? "primary" : "default"} onClick={() => setFilter("all")}>Tất cả</Button>
                 <Button type={filter === "finished" ? "primary" : "default"} onClick={() => setFilter("finished")}>Hoàn thành</Button>
                 <Button type={filter === "spending" ? "primary" : "default"} onClick={() => setFilter("spending")}>Đang thực hiện</Button>
