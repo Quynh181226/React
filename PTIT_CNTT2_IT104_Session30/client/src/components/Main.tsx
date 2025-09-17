@@ -39,7 +39,6 @@ export const Main = () => {
         const newTask = { id: Date.now(), title: input, completed: false }
         setTasks([...tasks, newTask])
         setInput("")
-        // có thể POST xuống server nếu muốn
         fetch("http://localhost:8080/tasks", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
