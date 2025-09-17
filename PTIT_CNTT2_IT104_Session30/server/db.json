@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Học React cơ bản",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Làm bài tập Todo App",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Ôn lại TypeScript",
+      "completed": false
+    }
+  ]
+}
