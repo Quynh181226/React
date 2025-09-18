@@ -8,7 +8,9 @@ interface EditModalProps {
     onUpdate: (id: number, newTitle: string) => void
 }
 
-export const EditModal = ({ open, task, onCancel, onUpdate }: EditModalProps) => {
+export const EditModal = (
+    { open, task, onCancel, onUpdate }: EditModalProps
+) => {
     const [value, setValue] = useState("")
 
     useEffect(() => {

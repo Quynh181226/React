@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "State",
+      "imageUrl": "http://localhost:5174/src/assets/Avatar.jpg",
+      "created": "18/9/2025",
+      "status": true,
+      "content": ""
+    },
+    {
+      "id": 2,
+      "title": "Props",
+      "imageUrl": "http://localhost:5174/src/assets/Avatar.jpg",
+      "created": "18/9/2025",
+      "status": true,
+      "content": ""
+    },
+    {
+      "id": 3,
+      "stt": "3",
+      "title": "Router",
+      "imageUrl": "http://localhost:5174/src/assets/Avatar.jpg",
+      "created": "18/9/2025",
+      "states": "Đã xuất bản",
+      "actions": [
+        "Chặn",
+        "Sửa",
+        "Xóa"
+      ],
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "Java",
+      "content": "",
+      "created": "19/9/2025",
+      "status": true,
+      "imageUrl": "http://localhost:5174/src/assets/Avatar.jpg"
+    }
+  ]
+}
