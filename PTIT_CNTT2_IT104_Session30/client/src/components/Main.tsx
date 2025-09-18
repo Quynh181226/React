@@ -6,6 +6,8 @@ import { ModalDel } from "./ModalDel"
 import { Loading } from "./Loading"
 import {ModalDeleteItem} from "./ModalDeleteItem.tsx";
 import {EditModal} from "./EditModal.tsx";
+import axios from "axios"
+
 
 export const Main = () => {
     const [tasks, setTasks] = useState<{ id: number; title: string; completed: boolean }[]>([])
@@ -25,10 +27,9 @@ export const Main = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch("http://localhost:8080/tasks")
-            .then(res => res.json())
-            .then(data => {
-                setTasks(data)
+        axios.get("http://localhost:8080/tasks")
+            .then(res => {
+                setTasks(res.data)
                 setLoading(false)
             })
             .catch(() => setLoading(false))
@@ -39,11 +40,7 @@ export const Main = () => {
         const newTask = { id: Date.now(), title: input, completed: false }
         setTasks([...tasks, newTask])
         setInput("")
-        fetch("http://localhost:8080/tasks", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newTask)
-        })
+        axios.post("http://localhost:8080/tasks", newTask)
     }
 
     const toggleTask = (id: number) => {
