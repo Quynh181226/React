@@ -21,7 +21,7 @@ export default function AddFrom({open, onClose, addNewPost, currentPostTarget, s
     const [btn, setBtn] = useState<"Publish" | "Edit">("Publish");
     const [showEmptyModal, setShowEmptyModal] = useState(false);
     const [post, setPost] = useState<Post>({id: "", title: "", content: "", created: "", status: true, imageUrl: ""});
-        useEffect(() => {
+    useEffect(() => {
         if (currentPostTarget) {
             setPost(currentPostTarget);
             form.setFieldsValue({
