@@ -1,5 +1,3 @@
-
-
 const themeReducer = (state: string = "light", action: {type: "CHANGE_THEME"})=>{
     switch(action.type){
         case "CHANGE_THEME":

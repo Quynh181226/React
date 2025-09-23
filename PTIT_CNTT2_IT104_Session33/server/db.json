@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Pizza Margherita",
+      "description": "Pizza Ý truyền thống với phô mai mozzarella, cà chua và lá basil.",
+      "price": 12,
+      "quantity": 5,
+      "imageUrl": "./assets/Mummum.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sushi Combo",
+      "description": "Set sushi gồm cá hồi, cá ngừ, và tôm.",
+      "price": 18,
+      "quantity": 20,
+      "imageUrl": "./assets/Mummum.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Phở Bò",
+      "description": "Món ăn truyền thống Việt Nam với nước dùng thơm ngon và thịt bò.",
+      "price": 6,
+      "quantity": 15,
+      "imageUrl": "./assets/Mummum.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Hamburger Bò",
+      "description": "Hamburger với thịt bò nướng, rau tươi và phô mai cheddar.",
+      "price": 8,
+      "quantity": 25,
+      "imageUrl": "./assets/Mummum.jpg"
+    }
+  ]
+}

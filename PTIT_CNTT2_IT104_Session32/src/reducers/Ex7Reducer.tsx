@@ -1,4 +1,3 @@
-
 import type { Ex7Action } from "../actions/Ex7Action.ts";
 import type { AccountType } from "../actions/Ex7Action.ts";
 type StateType = {
