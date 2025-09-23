@@ -1,4 +1,4 @@
-import "../index.css";
+// import "../index.css";
 import type { RootType } from "../store/Store";
 import { useSelector } from "react-redux";
 import { TableHead } from "./TableHead";
