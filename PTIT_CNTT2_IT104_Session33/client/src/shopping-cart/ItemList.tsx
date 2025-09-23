@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import type { ItemType } from "../reducers/ItemReducer.ts";
+import Mummum from "../assets/Mummum.jpg"
 
 export const ItemList = () => {
     const [items, setItems] = useState<ItemType[]>([]);
@@ -29,7 +30,7 @@ export const ItemList = () => {
             </h4>
             {items.map((p) => (
                 <div key={p.id}>
-                    <div><img src={p.imageUrl} style={{ width: "150px", height: "100%", borderRadius: "5px" }} /></div>
+                    <div><img src={Mummum}  style={{ width: "150px", height: "100%", borderRadius: "5px" }} /></div>
                     <div style={{ display: "flex", flexDirection: "column", gap: "7px", width: "150%" }}>
                         <h4>{p.name}</h4>
                         <p>{p.description}</p>

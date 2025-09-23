@@ -1,4 +1,3 @@
-
 import {useSelector} from "react-redux";
 import type {RootType} from "../store/Store.ts";
 

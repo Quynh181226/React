@@ -22,7 +22,7 @@
       "description": "Món ăn truyền thống Việt Nam với nước dùng thơm ngon và thịt bò.",
       "price": 6,
       "quantity": 15,
-      "imageUrl": "./assets/Mummum.jpg"
+      "imageUrl": "/assets/Mummum.jpg"
     },
     {
       "id": 4,
