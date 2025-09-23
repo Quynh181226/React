@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import type { ItemType } from "../reducers/ItemReducer";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootType } from "../store/Store";
@@ -30,7 +30,7 @@ export const TableRow = ({ item, index }: Prop) => {
         if (!amount) return;
 
         if (
-            products.some((p: { id: number; initialQuantity: any; }) => p.id === product.id && p.initialQuantity! < amount)
+            products.some((p: ItemType) => p.id === product.id && p.initialQuantity! < amount)
         ) {
             alert("Không đủ hàng trong kho!");
             return;
@@ -66,20 +66,13 @@ export const TableRow = ({ item, index }: Prop) => {
             <td>{item.name}</td>
             <td>{item.price} USD</td>
             <td>
-                <input
-                    type="number"
-                    value={amount === null ? item.quantity : amount < 1 ? 1 : amount}
-                    onChange={(e) => setAmount(Number(e.target.value))}
-                />
+                <input type="number" value={amount === null ? item.quantity : amount < 1 ? 1 : amount} onChange={(e) => setAmount(Number(e.target.value))} style={{ width: "50px", padding: "5px", border: "1px solid #ccc", textAlign: "center", borderRadius: "4px", outline: "none" }}/>
             </td>
             <td>
-                <button className="btn-update" onClick={() => handleUpdate(item)}>
+                <button onClick={() => handleUpdate(item)} style={{width: "40%", background: "#5bc0de", border: "none", color: "#fff", padding: "5px 10px", marginRight: "5px", borderRadius: "4px", cursor: "pointer", transition: "0.2s"}}>
                     Update
                 </button>
-                <button
-                    className="btn-delete"
-                    onClick={() => handleDelete(item.id, item.quantity)}
-                >
+                <button onClick={() => handleDelete(item.id, item.quantity)} style={{width: "40%", background: "#d9534f", border: "none", color: "#fff", padding: "5px 10px", borderRadius: "4px", cursor: "pointer", transition: "0.2s"}}>
                     Delete
                 </button>
             </td>

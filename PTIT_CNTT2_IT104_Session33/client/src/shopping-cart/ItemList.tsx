@@ -1,4 +1,3 @@
-// import type { RootType } from "../store/Store";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import type { ItemType } from "../reducers/ItemReducer.ts";
@@ -30,16 +29,16 @@ export const ItemList = () => {
             </h4>
             {items.map((p) => (
                 <div key={p.id}>
-                    <div><img src={p.imageUrl} style={{ width: "150px", height: "100%" }} /></div>
+                    <div><img src={p.imageUrl} style={{ width: "150px", height: "100%", borderRadius: "5px" }} /></div>
                     <div style={{ display: "flex", flexDirection: "column", gap: "7px", width: "150%" }}>
                         <h4>{p.name}</h4>
                         <p>{p.description}</p>
                     </div>
                     <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "50%" }}>
-                        <span style={{ border: "1px solid gray", padding: "15px", visibility: p.quantity === 0 ? "hidden" : "visible" }}>
+                        <span style={{ border: "1px solid gray", padding: "15px", visibility: p.quantity === 0 ? "hidden" : "visible", borderRadius: "3px", textAlign: "center" }}>
                             {p.quantity}
                         </span>
-                        <button disabled={p.quantity === 0} onClick={() => handleAdd(p)} style={{ color: "white", backgroundColor: p.quantity === 0 ? "gray" : "#fe6347" }}>
+                        <button disabled={p.quantity === 0} onClick={() => handleAdd(p)} style={{color: "white", backgroundColor: p.quantity === 0 ? "gray" : "#fe6347", borderRadius: "3px", border: "none", cursor: "pointer", transition: "all 0.3s ease"}}>
                             {p.price} USD
                         </button>
                     </div>
