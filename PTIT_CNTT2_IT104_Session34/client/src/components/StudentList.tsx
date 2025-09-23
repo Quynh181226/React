@@ -26,6 +26,9 @@ const StudentList: React.FC<StudentListProps> = ({ onRepair,st}) => {
     st(news);
   }
   const handleDelete = (id: string) => {
+    const isConfirmed = window.confirm('Bạn có chắc chắn muốn xóa sinh viên này?');
+    if (!isConfirmed) return;
+
     dispatch({ type: 'DELETE', payload: { id } });
   };
 

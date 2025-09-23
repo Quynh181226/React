@@ -25,17 +25,11 @@ const studentReducer = (state = studentInitial, action: ActionTypes) => {
         }
 
         case "SEARCH": {
-            const studentClones = [...state];
-            if (action.payload.name) {
-                const searctStudent = studentClones.filter((student) =>
-                    (student.name ?? "")
-                        .toLowerCase()
-                        .includes((action.payload.name ?? "").toLowerCase())
-                );
-                return searctStudent;
-            } else {
-                return studentInitial;
-            }
+            const keyword = (action.payload.name ?? "").toLowerCase();
+            const filtered = studentInitial.filter(student =>
+                (student.name ?? "").toLowerCase().includes(keyword)
+            );
+            return filtered;
         }
 
         case "EDIT":{
