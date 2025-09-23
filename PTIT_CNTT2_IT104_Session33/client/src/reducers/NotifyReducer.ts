@@ -1,10 +1,10 @@
 type StateType = {
-    msg: string;
+    message: string;
     style: string;
     status: boolean;
 };
 const initNotification:StateType = {
-    msg: "AVBC",
+    message: "AVBC",
     style: "alert alert-success",
     status: false,
 };
@@ -18,19 +18,19 @@ const notify = (state: StateType = initNotification, action: ActionType) => {
     switch (action.type) {
         case "ADDED":
             return {
-                msg: "ADDED TO CART SUCCESSFULLY",
+                message: "ADDED TO CART SUCCESSFULLY",
                 style: "alert alert-success",
                 status: true,
             };
         case "UPDATED":
             return {
-                msg: "UPDATED CART SUCCESSFULLY",
+                message: "UPDATED CART SUCCESSFULLY",
                 style: "alert alert-warning",
                 status: true,
             };
         case "FAILED":
             return {
-                msg: "NOT ENOUGH ITEM IN STOCK",
+                message: "NOT ENOUGH ITEM IN STOCK",
                 style: "alert alert-error",
                 status: true,
             };

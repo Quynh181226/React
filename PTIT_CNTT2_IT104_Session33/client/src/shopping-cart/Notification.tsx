@@ -5,6 +5,6 @@ export const Notification = () => {
 
     return (
         <div className={notification.style} style={{display: notification.status? "block" :"none"}}>
-            {notification.msg}
+            {notification.message}
         </div>  )
 }
