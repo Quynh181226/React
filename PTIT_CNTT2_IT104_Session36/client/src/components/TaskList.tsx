@@ -102,14 +102,22 @@ const TaskList: React.FC = () => {
                        <svg onClick={() => setDeleteId(null)} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                    </div>
                </div>
-                <DialogContent>Bạn có chắc muốn xóa công việc này?</DialogContent>
+
+                <DialogContent style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                    Bạn có chắc muốn xóa công việc{" "}
+                   <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                       <span className="font-semibold">
+                           {tasks.find((t) => t.id === deleteId)?.taskName}
+                       </span>
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                   </div>
+                    {" "}không?
+                </DialogContent>
+
                 <DialogActions>
-                    <Button onClick={() => setDeleteId(null)} color="primary">
-                        Hủy
-                    </Button>
-                    <Button onClick={confirmDelete} color="error">
-                        Xóa
-                    </Button>
+                    <Button onClick={() => setDeleteId(null)} color="primary">Hủy</Button>
+                    <Button onClick={confirmDelete} color="error">Xóa</Button>
                 </DialogActions>
             </Dialog>
         </div>
