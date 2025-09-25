@@ -8,7 +8,7 @@ import TaskItem from "./TaskItem"
 import {Dialog, DialogActions, DialogContent, DialogTitle, Button, CircularProgress,} from "@mui/material"
 import { setSelectedTask } from "../slices/taskSlice"
 
-const TaskList: React.FC = () => {
+export const TaskList: React.FC = () => {
     const dispatch = useAppDispatch()
     const { tasks, status, error } = useAppSelector((state) => state.task)
     const [deleteId, setDeleteId] = useState<number | null>(null)
@@ -123,5 +123,3 @@ const TaskList: React.FC = () => {
         </div>
     )
 }
-
-export default TaskList
