@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Học",
+      "completed": false,
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "taskName": "Ngủ",
+      "completed": true,
+      "priority": "low"
+    },
+    {
+      "id": 3,
+      "taskName": "Ăn",
+      "completed": false,
+      "priority": "medium"
+    },
+    {
+      "id": 4,
+      "taskName": "Chill",
+      "completed": true,
+      "priority": "low"
+    }
+  ]
+}
