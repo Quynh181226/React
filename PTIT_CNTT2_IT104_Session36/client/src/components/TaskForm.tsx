@@ -1,12 +1,4 @@
-
-import {
-    Button,
-    FormControl,
-    InputLabel,
-    MenuItem,
-    Select,
-    TextField,
-} from '@mui/material';
+import {Button, FormControl, InputLabel, MenuItem, Select, TextField,} from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks/hook';
 import { createTask, updateTask } from '../apis/api';
@@ -72,10 +64,7 @@ const TaskForm: React.FC = () => {
     };
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className="flex gap-4 items-center bg-white p-4 rounded-2xl shadow-md"
-        >
+        <form onSubmit={handleSubmit} className="flex gap-4 items-center bg-white p-4 rounded-2xl shadow-md">
             <TextField
                 label="Công việc mới"
                 variant="outlined"
@@ -89,11 +78,7 @@ const TaskForm: React.FC = () => {
             />
             <FormControl size="small" className="w-36">
                 <InputLabel>Ưu tiên</InputLabel>
-                <Select
-                    value={priority}
-                    onChange={(e) => setPriority(e.target.value as 'low' | 'medium' | 'high')}
-                    label="Ưu tiên"
-                >
+                <Select value={priority} label="Ưu tiên" onChange={(e) => setPriority(e.target.value as 'low' | 'medium' | 'high')}>
                     <MenuItem value="low">Thấp</MenuItem>
                     <MenuItem value="medium">Trung bình</MenuItem>
                     <MenuItem value="high">Cao</MenuItem>

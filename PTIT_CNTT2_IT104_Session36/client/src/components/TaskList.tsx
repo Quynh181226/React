@@ -5,13 +5,7 @@ import type { Task } from "../types/task"
 import TaskForm from "./TaskForm"
 import FilterControls from "./FilterControls"
 import TaskItem from "./TaskItem"
-import {
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
-    Button,
-} from "@mui/material"
+import {Dialog, DialogActions, DialogContent, DialogTitle, Button, CircularProgress,} from "@mui/material"
 import { setSelectedTask } from "../slices/taskSlice"
 
 const TaskList: React.FC = () => {
@@ -70,8 +64,8 @@ const TaskList: React.FC = () => {
             <h1 className="text-2xl font-bold mb-6 text-center">📝 Task Manager</h1>
 
             {status === "pending" && (
-                <div className="flex justify-center mb-4">
-                    <div className="loader animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+                <div className="flex justify-center items-center h-screen flex-col gap-3 bg-gray-100 z-[9999]">
+                    <CircularProgress size={48} sx={{ color: "#bfbfbf" }} />
                 </div>
             )}
 
@@ -102,7 +96,12 @@ const TaskList: React.FC = () => {
             </div>
 
             <Dialog open={!!deleteId} onClose={() => setDeleteId(null)}>
-                <DialogTitle>Xác nhận xóa</DialogTitle>
+               <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
+                   <DialogTitle>Xác nhận xóa</DialogTitle>
+                   <div style={{marginRight: 20}}>
+                       <svg onClick={() => setDeleteId(null)} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                   </div>
+               </div>
                 <DialogContent>Bạn có chắc muốn xóa công việc này?</DialogContent>
                 <DialogActions>
                     <Button onClick={() => setDeleteId(null)} color="primary">

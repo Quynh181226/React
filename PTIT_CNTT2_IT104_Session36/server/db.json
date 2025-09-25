@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "taskName": "Học",
-      "completed": false,
-      "priority": "high"
-    },
-    {
       "id": 2,
       "taskName": "Ngủ",
       "completed": true,
@@ -23,6 +17,12 @@
       "taskName": "Chill",
       "completed": true,
       "priority": "low"
+    },
+    {
+      "taskName": "Học",
+      "completed": true,
+      "priority": "high",
+      "id": 5
     }
   ]
 }

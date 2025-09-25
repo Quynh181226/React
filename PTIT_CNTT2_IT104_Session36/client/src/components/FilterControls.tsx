@@ -10,23 +10,12 @@ interface FilterControlsProps {
     onSearchChange: (search: string) => void;
 }
 
-const FilterControls: React.FC<FilterControlsProps> = ({
-                                                           status,
-                                                           priority,
-                                                           search,
-                                                           onStatusChange,
-                                                           onPriorityChange,
-                                                           onSearchChange,
-                                                       }) => {
+const FilterControls: React.FC<FilterControlsProps> = ({status, priority, search, onStatusChange, onPriorityChange, onSearchChange,}) => {
     return (
         <div className="mt-[15px] flex gap-4 items-center bg-white p-4 rounded-2xl shadow-md mb-4">
             <FormControl size="small" className="w-40">
                 <InputLabel>Trạng thái</InputLabel>
-                <Select
-                    value={status}
-                    label="Trạng thái"
-                    onChange={(e) => onStatusChange(e.target.value)}
-                >
+                <Select value={status} label="Trạng thái" onChange={(e) => onStatusChange(e.target.value)}>
                     <MenuItem value="all">Tất cả</MenuItem>
                     <MenuItem value="completed">Hoàn thành</MenuItem>
                     <MenuItem value="active">Chưa hoàn thành</MenuItem>
