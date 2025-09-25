@@ -9,8 +9,8 @@ import {Ex1} from "./components/Ex1.tsx";
 function App() {
     return (
         <>
+            <Ex1 />
             <div className="Border">
-                <Ex1 />
                 {/*<Ex2 />*/}
                 {/*<Ex3 />*/}
                 {/*<Ex4 />*/}
