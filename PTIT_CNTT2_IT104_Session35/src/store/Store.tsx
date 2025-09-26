@@ -15,7 +15,7 @@ export const Store = configureStore({
         Grid: Ex4,
         Menubar: Ex5,
         Language: Ex6,
-        Favorite: favoriteReducer, // <- đặt tên state rõ ràng
+        Favorite: favoriteReducer
     },
 })
 
