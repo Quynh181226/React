@@ -75,11 +75,7 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
     if (!name.trim()) {
       return 'Tên học sinh không được để trống';
     }
-    if (
-        students.some(
-            (student) => student.name === name.trim() && student.id !== (initial?.id || ''),
-        )
-    ) {
+    if (students.some((student) => student.name === name.trim() && student.id !== (initial?.id || ''),)) {
       return 'Tên học sinh đã tồn tại';
     }
     if (!Number.isInteger(age) || age <= 0 || age > 100) {
