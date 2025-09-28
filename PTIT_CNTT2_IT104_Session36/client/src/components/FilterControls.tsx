@@ -24,11 +24,7 @@ const FilterControls: React.FC<FilterControlsProps> = ({status, priority, search
 
             <FormControl size="small" className="w-40">
                 <InputLabel>Ưu tiên</InputLabel>
-                <Select
-                    value={priority}
-                    label="Ưu tiên"
-                    onChange={(e) => onPriorityChange(e.target.value)}
-                >
+                <Select value={priority} label="Ưu tiên" onChange={(e) => onPriorityChange(e.target.value)}>
                     <MenuItem value="all">Tất cả</MenuItem>
                     <MenuItem value="low">Thấp</MenuItem>
                     <MenuItem value="medium">Trung bình</MenuItem>

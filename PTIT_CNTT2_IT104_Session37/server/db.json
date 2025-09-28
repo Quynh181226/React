@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn An",
+      "age": 16,
+      "grade": "10A1"
+    },
+    {
+      "id": "2",
+      "name": "Trần Thị Bình",
+      "age": 17,
+      "grade": "11B1"
+    },
+    {
+      "id": "1759054799286",
+      "name": "Quỳnh",
+      "age": 18,
+      "grade": "CNTT2"
+    },
+    {
+      "id": "1759054950267",
+      "name": "Nhi",
+      "age": 19,
+      "grade": "DTCN"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Student } from '../types/type.ts';
-import StudentItem from './StudentItem.tsx';
+import type { Student } from '../types/type';
+import StudentItem from './StudentItem';
 
 interface Props {
   students: Student[];
@@ -14,11 +14,11 @@ const StudentList: React.FC<Props> = ({ students, onEdit, onDelete }) => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {students.map((s) => (
-        <StudentItem key={s.id} student={s} onEdit={onEdit} onDelete={onDelete} />
-      ))}
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {students.map((s) => (
+            <StudentItem key={s.id} student={s} onEdit={onEdit} onDelete={onDelete} />
+        ))}
+      </div>
   );
 };
 
