@@ -26,7 +26,7 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
   const [name, setName] = useState(initial?.name ?? '');
 
 
-  const [age, setAge] = useState(initial?.age ?? 0);
+  const [age, setAge] = useState<number | ''>(initial?.age ?? "");
 
 
 
@@ -37,7 +37,7 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
 
   useEffect(() => {
     setName(initial?.name ?? '');
-    setAge(initial?.age ?? 0);
+    setAge(initial?.age ?? "");
     setGrade(initial?.grade ?? '');
 
 
@@ -69,6 +69,15 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
 
     setError('');
 
+  };
+
+
+  const handleClose = () => {
+    setName('');
+    setAge('');
+    setGrade('');
+    setError('');
+    onClose();
   };
 
   const validateInput = (name: string, age: number, grade: string) => {
@@ -125,7 +134,12 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
                 value={age}
 
                 onChange={(e) => {
-                  setAge(Number(e.target.value));
+                  // setAge(Number(e.target.value));
+
+
+                  setAge(e.target.value === '' ? '' : Number(e.target.value))
+
+
                   setError('');
                 }}
 
@@ -156,10 +170,16 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={onClose}>Hủy</Button>
-            <Button type="submit" variant="contained" color="primary">
-              {initial?.id ? 'Lưu' : 'Thêm'}
-            </Button>
+
+
+
+            <Button onClick={handleClose}>Hủy</Button>
+
+
+
+            <Button type="submit" variant="contained" color="primary"> {initial?.id ? 'Lưu' : 'Thêm'} </Button>
+
+
           </DialogActions>
         </form>
       </Dialog>
