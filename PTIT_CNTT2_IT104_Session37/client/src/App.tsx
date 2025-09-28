@@ -1,6 +1,9 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { Button, CircularProgress, Typography } from '@mui/material';
-import { useAppDispatch, useAppSelector } from './stores/store';
+
+
+import { useAppDispatch, useAppSelector } from './hooks/hook';
+
 import { getAllStudents, addStudent, updateStudent, deleteStudent} from './apis/api';
 // import { getStuUpdate, resetStuUpdate } from "./slices/studentSlice"
 import type { Student } from './types/type';
@@ -29,18 +32,17 @@ const App: React.FC = () => {
     dispatch(getAllStudents());
   }, [dispatch]);
 
+
   const grades = useMemo(() => {
     return Array.from(new Set(students.map((s) => s.grade))).sort();
   }, [students]);
 
 
-  // Trong handleAddClick, bạn đã comment dòng dispatch(resetStuUpdate()) và thay bằng dispatch(undefined).
-  // resetStuUpdate là một action creator từ studentSlice, tạo ra một action hợp lệ để reset studentUpdate trong Redux state. Tuy nhiên, undefined không phải là một action hợp lệ, dẫn đến lỗi TypeScript.
 
 
   const handleAddClick = () => {
     // dispatch(resetStuUpdate());
-    // bạn không cần gọi dispatch để reset state trong Redux nữa. Thay vào đó, chỉ cần reset editingStudent bằng setEditingStudent(undefined).
+
     setEditingStudent(undefined);
     setOpenForm(true);
   };
@@ -55,9 +57,9 @@ const App: React.FC = () => {
 
 
 
-
-
     setEditingStudent(undefined);
+
+
   };
 
   const handleEdit = (s: Student) => {
@@ -103,6 +105,9 @@ const App: React.FC = () => {
       <div className="max-w-4xl mx-auto p-6 bg-gray-50 min-h-screen">
         <h1 className="text-3xl font-bold mb-6">🎓 Quản lý học sinh</h1>
 
+
+
+
         {status === 'pending' && (
             // <div className="text-center my-4">
             //   <CircularProgress />
@@ -111,6 +116,8 @@ const App: React.FC = () => {
                 <CircularProgress size={48} sx={{ color: "#a0b3cf" }} />
               </div>
         )}
+
+
         {status === 'failed' && (
             <Typography color="error" className="mb-4">
               Lỗi: {error}

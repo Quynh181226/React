@@ -20,10 +20,16 @@ export const addStudent = createAsyncThunk(
 
 export const deleteStudent = createAsyncThunk(
     "student/deleteStudent",
-    async (id: string) => { // Sửa id thành string
+
+
+
+    async (id: string) => {
         await axiosConfig.delete(`students/${id}`);
         return id;
     }
+
+
+
 );
 
 export const updateStudent = createAsyncThunk(

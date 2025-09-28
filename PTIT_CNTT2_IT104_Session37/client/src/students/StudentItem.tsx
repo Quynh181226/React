@@ -1,6 +1,5 @@
 import { Card, CardContent, IconButton, Typography } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
-import React from 'react';
 import type { Student } from '../types/type';
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
   onDelete: (id: string) => void;
 }
 
-const StudentItem: React.FC<Props> = ({ student, onEdit, onDelete }) => {
+const StudentItem = ({ student, onEdit, onDelete }: Props) => {
   return (
       <Card className="rounded-xl shadow-sm">
         <CardContent className="flex items-center justify-between">

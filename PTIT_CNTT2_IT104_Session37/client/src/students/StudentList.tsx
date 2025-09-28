@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Student } from '../types/type';
 import StudentItem from './StudentItem';
 
@@ -8,7 +7,7 @@ interface Props {
   onDelete: (id: string) => void;
 }
 
-const StudentList: React.FC<Props> = ({ students, onEdit, onDelete }) => {
+const StudentList= ({ students, onEdit, onDelete }: Props) => {
   if (students.length === 0) {
     return <div className="text-center text-gray-500 py-8">Không có học sinh nào</div>;
   }

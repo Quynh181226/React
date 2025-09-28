@@ -7,7 +7,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { Student } from '../types/type';
 
 interface Props {
@@ -22,7 +22,7 @@ interface Props {
   onSubmit: (data: { id?: string; name: string; age: number; grade: string }) => void;
 }
 
-const StudentForm: React.FC<Props> = ({open, initial, students, onClose, onSubmit}) => {
+const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
   const [name, setName] = useState(initial?.name ?? '');
 
 
