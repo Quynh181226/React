@@ -94,3 +94,101 @@ https://200lab.io/blog/huong-dan-su-dung-redux-trong-du-an-react
 https://freetuts.net/xay-dung-ung-dung-crud-voi-redux-toolkit-5666.html
 
 https://viblo.asia/p/react-cung-tim-hieu-ve-redux-toolkit-mot-phien-ban-moi-cua-redux-XL6lA6yg5ek
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mình giải thích chi tiết cho bạn nhé 👇
+
+Trong Redux Toolkit (RTK), khi bạn dùng `createSlice`, bạn thường viết reducer như sau:
+
+```ts
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
+
+interface Student {
+  id: number
+  name: string
+}
+
+interface StudentState {
+  students: Student[]
+}
+
+const initialState: StudentState = {
+  students: []
+}
+
+const studentSlice = createSlice({
+  name: "student",
+  initialState,
+  reducers: {
+    setStudents: (state, action: PayloadAction<Student[]>) => {
+      // action.payload sẽ có kiểu Student[]
+      state.students = action.payload
+    },
+    addStudent: (state, action: PayloadAction<Student>) => {
+      // action.payload sẽ có kiểu Student
+      state.students.push(action.payload)
+    }
+  }
+})
+
+export const { setStudents, addStudent } = studentSlice.actions
+export default studentSlice.reducer
+```
+
+---
+
+### Giải thích:
+
+1. **`PayloadAction<T>`**
+
+   * Đây là một **generic type** mà Redux Toolkit cung cấp.
+   * Nó giúp xác định kiểu dữ liệu của `action.payload`.
+
+   Ví dụ:
+
+   * `PayloadAction<Student[]>` nghĩa là: action khi dispatch sẽ mang theo `payload` có kiểu `Student[]`.
+   * `PayloadAction<Student>` nghĩa là: action khi dispatch sẽ mang theo `payload` có kiểu `Student`.
+
+2. **Công dụng**
+
+   * Giúp **type an toàn**: khi bạn truy cập `action.payload`, TypeScript sẽ biết chính xác kiểu dữ liệu.
+   * Tránh lỗi runtime do truyền sai dữ liệu.
+   * Tự động hỗ trợ IntelliSense (gợi ý code) khi bạn viết reducer.
+
+3. **Ví dụ cụ thể**
+
+   * Nếu bạn dispatch như sau:
+
+     ```ts
+     dispatch(setStudents([{ id: 1, name: "An" }, { id: 2, name: "Bình" }]))
+     ```
+
+     thì `payload` là `Student[]`.
+
+   * Còn khi bạn thêm 1 sinh viên:
+
+     ```ts
+     dispatch(addStudent({ id: 3, name: "Chi" }))
+     ```
+
+     thì `payload` là `Student`.
+
+---
+
+👉 Tóm lại:
+
+* `PayloadAction<Student[]>`: dùng khi action mang **một mảng sinh viên**.
+* `PayloadAction<Student>`: dùng khi action mang **một sinh viên duy nhất**.
+
+---

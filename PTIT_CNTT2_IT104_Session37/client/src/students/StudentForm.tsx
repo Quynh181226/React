@@ -125,7 +125,7 @@ const StudentForm = ({open, initial, students, onClose, onSubmit}: Props) => {
 
 
                 fullWidth
-                required
+                // required
                 autoFocus
             />
             <TextField

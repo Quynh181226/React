@@ -24,11 +24,7 @@ const StudentItem = ({ student, onEdit, onDelete }: Props) => {
             <IconButton size="small" onClick={() => onEdit(student)} aria-label="edit">
               <Edit fontSize="small" />
             </IconButton>
-            <IconButton
-                size="small"
-                onClick={() => onDelete(student.id)}
-                aria-label="delete"
-            >
+            <IconButton size="small" onClick={() => onDelete(student.id)} aria-label="delete">
               <Delete fontSize="small" />
             </IconButton>
           </div>

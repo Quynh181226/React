@@ -1,5 +1,5 @@
 import React, { useMemo, useEffect, useState } from 'react';
-import { Button, CircularProgress, Typography } from '@mui/material';
+import {Button, CircularProgress, Typography} from '@mui/material';
 
 
 import { useAppDispatch, useAppSelector } from './hooks/hook';
@@ -22,7 +22,7 @@ const App: React.FC = () => {
 
 
 
-  const [editingStudent, setEditingStudent] = useState<Student | undefined>(undefined); // State cục bộ
+  const [editingStudent, setEditingStudent] = useState<Student | undefined>(undefined);
 
 
 
