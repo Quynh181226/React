@@ -192,3 +192,206 @@ export default studentSlice.reducer
 * `PayloadAction<Student>`: dùng khi action mang **một sinh viên duy nhất**.
 
 ---
+
+
+
+
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+
+
+Ok, câu này hay 👍 mình sẽ hệ thống lại toàn bộ **các thành phần cần thiết khi sử dụng Redux Toolkit** và giải thích **chúng liên kết với nhau như thế nào** trong một ứng dụng React.
+
+---
+
+# 🏗️ Các thành phần chính của Redux Toolkit
+
+### 1. **Store**
+
+* Là “kho trung tâm” lưu trữ toàn bộ state của ứng dụng.
+* Được tạo bằng `configureStore()`.
+* Nơi kết nối các **slice reducer** lại với nhau.
+
+👉 Ví dụ:
+
+```ts
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counterSlice'
+import userReducer from './userSlice'
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+    user: userReducer
+  }
+})
+```
+
+---
+
+### 2. **Slice**
+
+* Được tạo bằng `createSlice()`.
+* Mỗi slice đại diện cho **một phần state** và cách thay đổi nó.
+* Bao gồm:
+
+    * `name`: tên slice.
+    * `initialState`: state khởi tạo.
+    * `reducers`: xử lý action nội bộ.
+    * `extraReducers`: xử lý action từ bên ngoài (thường là async thunk).
+
+👉 Ví dụ:
+
+```ts
+import { createSlice } from '@reduxjs/toolkit'
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => { state.value++ },
+    decrement: (state) => { state.value-- }
+  }
+})
+
+export const { increment, decrement } = counterSlice.actions
+export default counterSlice.reducer
+```
+
+---
+
+### 3. **Action**
+
+* Là “tín hiệu” mô tả muốn thay đổi gì trong state.
+* Redux Toolkit tự động sinh action từ `reducers` trong slice.
+* Khi gọi `dispatch(action)` → action sẽ đi qua reducer để cập nhật state.
+
+👉 Ví dụ:
+
+```ts
+dispatch(increment())    // state.value + 1
+dispatch(decrement())    // state.value - 1
+```
+
+---
+
+### 4. **Reducer**
+
+* Là hàm nhận vào `state hiện tại` và `action`, sau đó trả về `state mới`.
+* Trong Redux Toolkit, reducer nằm trong **slice**.
+* Store kết hợp tất cả reducer từ nhiều slice.
+
+---
+
+### 5. **Async Thunk (`createAsyncThunk`)**
+
+* Dùng để xử lý **logic bất đồng bộ** (call API, fetch dữ liệu...).
+* Redux Toolkit tự sinh ra 3 action: `pending`, `fulfilled`, `rejected`.
+* Các action này được lắng nghe trong `extraReducers`.
+
+👉 Ví dụ:
+
+```ts
+import { createAsyncThunk } from '@reduxjs/toolkit'
+
+export const fetchUser = createAsyncThunk(
+  'user/fetchUser',
+  async (id) => {
+    const res = await fetch(`/api/users/${id}`)
+    return res.json()
+  }
+)
+```
+
+---
+
+### 6. **Provider**
+
+* Component `Provider` của `react-redux` để “bọc” toàn bộ ứng dụng.
+* Truyền `store` xuống cho tất cả component con.
+
+👉 Ví dụ:
+
+```tsx
+import { Provider } from 'react-redux'
+import { store } from './store'
+
+function App() {
+  return (
+    <Provider store={store}>
+      <MyComponent />
+    </Provider>
+  )
+}
+```
+
+---
+
+### 7. **Hooks (`useSelector`, `useDispatch`)**
+
+* **`useSelector`**: lấy dữ liệu từ store.
+* **`useDispatch`**: gửi action để thay đổi state.
+
+👉 Ví dụ:
+
+```tsx
+import { useSelector, useDispatch } from 'react-redux'
+import { increment } from './counterSlice'
+
+function Counter() {
+  const value = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      <p>{value}</p>
+      <button onClick={() => dispatch(increment())}>Increase</button>
+    </div>
+  )
+}
+```
+
+---
+
+#  Mối liên hệ giữa các thành phần
+
+1. **Slice** định nghĩa:
+
+    * State (`initialState`)
+    * Reducer logic (cách state thay đổi)
+    * Action tương ứng
+
+2. **Store** gom nhiều slice reducer → tạo thành state toàn cục.
+
+3. **Provider** bọc app → cung cấp `store` cho React.
+
+4. **useSelector** giúp component **đọc state** từ store.
+
+5. **useDispatch** giúp component **gửi action** để thay đổi state.
+
+6. **Action** đi vào **reducer trong slice** → tạo ra state mới.
+
+7. Nếu có **async thunk** → khi dispatch nó sẽ chạy promise và tự động bắn ra `pending`, `fulfilled`, `rejected` → `extraReducers` lắng nghe để cập nhật state.
+
+---
+
+# Hình dung flow
+
+```
+Component -> dispatch(action) 
+          -> Store chuyển action vào reducer
+          -> Reducer cập nhật state
+          -> Store thông báo state mới
+          -> Component dùng useSelector nhận state mới và re-render
+```
+
+* **Slice** = định nghĩa state + logic thay đổi
+* **Reducer** = thực thi thay đổi state
+* **Action** = thông báo muốn thay đổi
+* **AsyncThunk** = xử lý bất đồng bộ
+* **Store** = gom toàn bộ state
+* **Provider** = đưa store xuống toàn app
+* **useSelector/useDispatch** = cầu nối giữa React component và Redux store
+
+---
